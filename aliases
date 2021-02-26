@@ -5,3 +5,26 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
+
+# Get External IP / Internet Speed
+alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
+# Quickly serve the current directory as HTTP
+alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
+alias rs='rails s'
+alias sk='bundle exec sidekiq'
+alias rc='rails c'
+alias resetdb='rails db:drop db:create db:migrate db:seed'
+alias wp='webpack-dev-server'
+alias fm='foreman start -f Procfile.dev'
+alias lg='tail -f log/development.log'
+alias oc='overmind connect web'
+# Serve
+function s(){
+  if [ -f './Procfile.dev' ]; then
+    command overmind start -f ./Procfile.dev
+  elif [ -f './Procfile' ]; then
+    command overmind start -c release
+  elif [ -f "bin/rails" ]; then
+    command bundle exec rails s
+  fi
+}
