@@ -13,6 +13,7 @@ alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
 alias rs='rails s'
 alias sk='bundle exec sidekiq'
 alias rc='rails c'
+alias gco='git checkout'
 alias resetdb='rails db:drop db:create db:migrate db:seed'
 alias wp='webpack-dev-server'
 alias fm='foreman start -f Procfile.dev'

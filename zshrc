@@ -8,7 +8,6 @@ ZSH_THEME="robbyrussell"
 if [ -x "$(command -v rbenv)" ]; then RPS1='[$(ruby_prompt_info)]$EPS1'; fi
 
 plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search z)
-
 # Useful plugins for Rails development with Sublime Text
 plugins=(gitfast brew rbenv last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
 
